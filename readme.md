@@ -1,5 +1,5 @@
 # UESTC RGB-D Action Database
-UESTC RGB-D Action Database contains 40 categories of aerobic exercise. We utilize 2 Kinect V2 cameras in 8 fixed directions and 1 round direction to capture these actions with the data modality of RGB video, 3D skeleton sequences and depth map sequences. 
+UESTC RGB-D Action Database contains 40 categories of aerobic exercise. We utilized 2 Kinect V2 cameras in 8 fixed directions and 1 round direction to capture these actions with the data modalities of RGB video, 3D skeleton sequences and depth map sequences. 
 
 
 The camera1 is fixed in the front view and we move the camera2 to 8 different directions. We record three kinds of data from Kinect V2, Skeleton, RGB Video and Depth Image at 30 Hz. The subjects perform 3 repetitions of each action in a fixed direction while perform each action until the capture finished in the round direction. Prior to each recording, the subjects are given instructions on how actions to perform, however no specific details about performance style or speed are given to subjects.
@@ -122,7 +122,7 @@ For example：
 
 ## 2	Data Modalities
 
-**Note**: In some actions, when we collect side views ax_d1_px_c2, ax_d2_px_c2 and ax_d3_px_c2 data with camera2, we also use camera3 to collect side views ax_d7_px_c2, ax_d6_px_c2 and ax_d5_px_c2 data, at the same time, the data collected from camera1 are named as ax_d1_px_c1, ax_d2_px_c1 and ax_d3_px_c1. Which means, for each action, except for varying view, there are 7 side view data named ax_dm_px_c2 (m: 1~7) and 4 front view data named ax_dn_px_c1 (n: 1~4). To keep the integrity of this dataset, we copy data named ax_d1_px_c1, ax_d2_px_c1 and ax_d2_px_c1 to ax_d7_px_c1, ax_d6_px_c1 and ax_d5_px_c1. But the depth files are too big to process, so we made a name map for Depth Data and can be found in ‘namemap.xls’. 
+**Note**: In some actions, when we collect side views ax_d1_px_c2, ax_d2_px_c2 and ax_d3_px_c2 data with camera2, we also use camera3 to collect side views ax_d7_px_c2, ax_d6_px_c2 and ax_d5_px_c2 data, at the same time, the data collected from camera1 are named as ax_d1_px_c1, ax_d2_px_c1 and ax_d3_px_c1. Which means, for each action, except for varying view, there are 7 side view data named ax_dm_px_c2 (m: 1 to 7) and 4 front view data named ax_dn_px_c1 (n: 1 to 4). To keep the integrity of this dataset, we copy data named ax_d1_px_c1, ax_d2_px_c1 and ax_d2_px_c1 to ax_d7_px_c1, ax_d6_px_c1 and ax_d5_px_c1. But the depth files are too big to process, so we made a name map for Depth Data and can be found in ‘namemap.xls’. 
 
 The first column in the ‘namemap.xls’ presents the true name of all files but some of them do not existed, the second column presents the corresponding existent files that you should find, the third column presents whether files are the same as their true names.
 
