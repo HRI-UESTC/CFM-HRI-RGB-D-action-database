@@ -132,7 +132,7 @@ The first column in the ‘namemap.xls’ presents the true name of all files bu
 Color videos are in the “RGBvideo/ax_dx_px_cx_color.avi” directory with the video format “.avi” and each frame resolution is 960*540（CV_8UC3, and video frames are synchronized with the Joint Skeleton Frame）.The approximate lengths of each recording in the fixed view and round view are 6 sec and 57 sec.
 
 ### 2.2	Skeleton TXT (25600 files with size of 11.7GB)
-The skeleton txt are in the “skeleton/ax_dx_px_cx_skeleton.txt” directory with file format of “.txt”. We utilize Kinect V2 cameras to record 25 body joints’ coordinates in one frame, each file contains all skeleton frames in one sample. Each skeleton frame is comprised of 76 lines content in txt file.
+The skeleton raw files(saved as .txt files) are saved in the “skeleton/ax_dx_px_cx_skeleton.txt” directory. We utilized Kinect V2 cameras to record 25 body joints’ coordinates at each frame, each file contains all skeleton frames in one sample. Each skeleton frame is comprised of 76 lines content in txt file.
 
 * **First line** is “#”, “#” is a notation for the start of one joint frame.
 * <b>The 2nd to 76th lines</b> are 25 joints of one frame (3D camera space coordinates, color frame point, and depth frame point). 
@@ -148,6 +148,10 @@ According to the Kinect SDK document, the high 13-bits in the depth data represe
 
 ### 2.4	Skeleton MAT (25600 files with size of 5.5GB)
 Skeleton files(saved as .mat files) are saved in the “mat_from_skeleton/ax_dx_px_cx_skeleton.mat” directory. The mats are extracted from skeleton txt files. In one mat file, each row contains one skeleton frame (25 joints) and these joints are described in camera space coordinate.
+
+
+## 3. data prepare script
+We provide a raw data prepare script used to re-format the raw skeleton files , please refer to `scripts/` directory for more detail.
 
 ****
 
