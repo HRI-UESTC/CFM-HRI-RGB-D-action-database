@@ -126,10 +126,12 @@ For example：
 
 The first column in the ‘namemap.xls’ presents the true name of all files but some of them do not existed, the second column presents the corresponding existent files that you should find, the third column presents whether files are the same as their true names.
 
-### 2.1  Color AVI (25600files 81.2GB)
+**For the detail, please refer to the file `namemap.xls` in this folder.**
+
+### 2.1  Color AVI (25600 files with size of 81.2GB)
 Color videos are in the “RGBvideo/ax_dx_px_cx_color.avi” directory with the video format “.avi” and each frame resolution is 960*540（CV_8UC3, and video frames are synchronized with the Joint Skeleton Frame）.The approximate lengths of each recording in the fixed view and round view are 6 sec and 57 sec.
 
-### 2.2	Skeleton TXT (25600files 11.7GB)
+### 2.2	Skeleton TXT (25600 files with size of 11.7GB)
 The skeleton txt are in the “skeleton/ax_dx_px_cx_skeleton.txt” directory with file format of “.txt”. We utilize Kinect V2 cameras to record 25 body joints’ coordinates in one frame, each file contains all skeleton frames in one sample. Each skeleton frame is comprised of 76 lines content in txt file.
 
 * **First line** is “#”, “#” is a notation for the start of one joint frame.
@@ -140,18 +142,20 @@ The skeleton txt are in the “skeleton/ax_dx_px_cx_skeleton.txt” directory wi
 
 And we provide the Matlab script for skeleton data read, named “skl_features_extract.m”. 
 
-### 2.3	Depth Folder (21509files 1.34TB)
+### 2.3	Depth Folder (21509 files with size of 1.34TB)
 Depth data is in the “depth/ax_cx_dx_px_depth.tar” directory. These depth images are saved in the format of “.png” with the resolution of 512*424. Depth pixels are saved to unit16 bits.
 According to the Kinect SDK document, the high 13-bits in the depth data represent the real value of the depth while the low 3-bits is encoded with user-ID to distinguish the different users. Moreover, the measurement range of the depth acquisition is from 0.5 meter to 4.5 meter with the high precision of 1 millimeter. 
 
-### 2.4	Skeleton MAT (25600files 5.5GB)
-Skeleton mats are in the “mat_from_skeleton/ax_dx_px_cx_skeleton.mat” directory. The mats are extracted from skeleton txt files. In one mat file, each row contains one skeleton frame (25 joints) and these joints are described in camera space coordinate.
+### 2.4	Skeleton MAT (25600 files with size of 5.5GB)
+Skeleton files(saved as .mat files) are saved in the “mat_from_skeleton/ax_dx_px_cx_skeleton.mat” directory. The mats are extracted from skeleton txt files. In one mat file, each row contains one skeleton frame (25 joints) and these joints are described in camera space coordinate.
 
 ****
 
 ## What's more
 
-Please refer to the file `Appendix.pdf` for more detail about the action categories both in English and Chinese. If you have any question about this database including wishing to evalute your algorithm on this database, feel free to contact us with e-mail [yanliji@uestc.edu.cn](yanliji@uestc.edu.cn).
+Please refer to the file `Appendix.pdf` for more detail about the action categories both in English and Chinese. Before using this database, please make sure you have read `License Agreement.docx` yet.
+
+Anyway, If you have any question about this database including wishing to evalute your algorithm on this database, feel free to contact us with e-mail [yanliji@uestc.edu.cn](yanliji@uestc.edu.cn). 
 
 
 
